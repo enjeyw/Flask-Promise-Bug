@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+Loaded...
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+  console.log('document ready');
+
+  fetch('/foo/').then(function(response) {
+    console.log('then triggered');
+    return response.json();
+  }).then(function(json) {
+   console.log(json)
+  });
+});
+</script>
+
+</html>
